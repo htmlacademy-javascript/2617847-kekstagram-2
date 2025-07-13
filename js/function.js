@@ -2,20 +2,17 @@
 
 
 function checkStringLenght (string, maxLength) {
-  if (string.lenght <= maxLenght) {
+  if (string.lenght <= maxLength) {
     return true;
   }
-  else {
-    return false;
-  }
-};
+}
 
 // Задача #2
 
 function palindromeCheck (string = '') {
   string = string.toString();
-  toLowerCase();
-  replaceAll(" ", "");
+  string = string.toLowerCase();
+  string = string.replaceAll(" ", "");
 
   let reversedString = "";
 
@@ -24,7 +21,7 @@ function palindromeCheck (string = '') {
   }
 
   return string === reversedString;
-};
+}
 
 // Задача #3
 
@@ -33,11 +30,11 @@ function extractNumbers (string) {
 
   string = string.toString();
 
-  for (let i = 0; i <= string.lenght - 1; i++) {
-    if (Number.isNaN(parseInt(stringi[i]. 10)) === false) {
+  for (let i = 0; i <= string.length - 1; i++) {
+    if (!Number.isNaN(parseInt(string[i], 10))) {
       result += string[i];
     }
   }
 
-  return result === '' ? Nan : Number(result);
+  return parseInt(result, 10);
 }
