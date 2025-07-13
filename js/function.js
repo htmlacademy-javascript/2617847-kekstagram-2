@@ -2,7 +2,6 @@
 
 
 function checkStringLength (string, maxLength) {
-  if (string.length <= maxLength)
     return string.length <= maxLength;
 }
 
