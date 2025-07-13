@@ -1,10 +1,9 @@
 // Задача #1
 
 
-function checkStringLenght (string, maxLength) {
-  if (string.lenght <= maxLength) {
-    return true;
-  }
+function checkStringLength (string, maxLength) {
+  if (string.length <= maxLength)
+    return string.length <= maxLength;
 }
 
 // Задача #2
