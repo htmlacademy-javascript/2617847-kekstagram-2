@@ -1,4 +1,3 @@
-
 // Данные для генерации
 const MESSAGES = [
   'Всё отлично!',
@@ -67,25 +66,22 @@ const getUniqueId = () => {
 }
 const getRandomArrayElement = (elements) => elements[getRandomInteger(0, elements.length - 1)];
 
-
-
 //Функция генерации комментария
 const generateComment = () => {
-  const generateCommentId = getUniqueId();
+  const generateCommentId = getUniqueId;
   return Array.from({length: getRandomInteger(MIN_COMMENTS, MAX_COMMENTS)}, () => ({
-    id: generateCommentId(),
+    id: generateCommentId,
     avatar: `img/avatar-${getRandomInteger(AVATAR_MIN_RANGE, AVATAR_MAX_RANGE)}.svg`,
     message: Array.from({length: getRandomInteger(MESSAGE_MIN_RANGE, MESSAGE_MAX_RANGE)}, () => getRandomArrayElement(MESSAGES)).join(' '),
     name: getRandomArrayElement(NAMES)
   }))
 };
 
-const photoId = getUniqueId();
-
 // Функция генерации фото
 const generatePhotoMessage = () => {
+  const photoId = getUniqueId();
   return {
-    id: photoId(),
+    id: photoId,
     url: `photos/${photoId()}.jpg`,
     description: getRandomArrayElement(DESCRIPTIONS),
     likes: getRandomInteger(MIN_LIKES, MAX_LIKES),
