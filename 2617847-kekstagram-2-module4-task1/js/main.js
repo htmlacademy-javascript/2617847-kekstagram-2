@@ -56,14 +56,12 @@ const MESSAGE_MAX_RANGE = 2;
 
 // Рандомайзеры
 const getRandomInteger = (a, b) => Math.floor(Math.random() * (b - a + 1)) + a;
-
 const getUniqueId = () => {
   let lastId = 0;
   return () => ++lastId;
-};
+}
 
 const getRandomArrayElement = (elements) => elements[getRandomInteger(0, elements.length - 1)];
-
 //Функция генерации комментария
 const generateId = getUniqueId();
 
@@ -92,4 +90,4 @@ function generatePhotoMessage() {
 // Создание массива фотографий
 const photos = Array.from({length: PHOTO_MAX_RANGE}, generatePhotoMessage);
 
-window.console.log(photos);
+console.log(photos)
