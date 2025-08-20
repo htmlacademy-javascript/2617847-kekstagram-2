@@ -1,6 +1,5 @@
 // Задача #1
 
-
 function checkStringLength (string, maxLength) {
   return string.length <= maxLength;
 }
@@ -10,7 +9,7 @@ function checkStringLength (string, maxLength) {
 function palindromeCheck (string = '') {
   string = string.toString();
   string = string.toLowerCase();
-  string = string.replaceAll(" ", "");
+  string = string.replaceAll('', '');
 
   let reversedString = "";
 
@@ -36,4 +35,4 @@ function extractNumbers (string) {
 
   return parseInt(result, 10);
 }
-console.log(extractNumbers)
+window.console.log(extractNumbers)
