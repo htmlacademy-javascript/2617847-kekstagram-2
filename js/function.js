@@ -11,7 +11,7 @@ function palindromeCheck (string = '') {
   string = string.toLowerCase();
   string = string.replaceAll('', '');
 
-  let reversedString = "";
+  let reversedString = '';
 
   for (let i = string.length - 1; i >= 0; i--) {
     reversedString += string[i];
