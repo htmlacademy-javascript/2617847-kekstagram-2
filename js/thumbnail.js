@@ -8,13 +8,13 @@ const createThumbnail = (photo) => {
   const thumbnail = template.cloneNode(true);
   thumbnail.href = photo.url;
   thumbnail.dataset.id = photo.id;
-  const image = template.querySelector('.picture__img');
+  const image = thumbnail.querySelector('.picture__img');
 
   image.src = photo.url;
   image.alt = photo.description;
 
-  template.querySelector('.picture__comments').textContent = photo.comments.length;
-  template.querySelector('.picture__likes').textContent = photo.likes;
+  thumbnail.querySelector('.picture__comments').textContent = photo.comments.length;
+  thumbnail.querySelector('.picture__likes').textContent = photo.likes;
 
   return thumbnail;
 };
