@@ -83,6 +83,12 @@ function generatePhotoMessage() {
   };
 }
 // Создание массива фотографий
+ module7-task1
+const mockedPhotos = Array.from({length: PHOTO_MAX_RANGE}, generatePhotoMessage);
+
+export {mockedPhotos};
+=======
 const photos = Array.from({length: PHOTO_MAX_RANGE}, generatePhotoMessage);
 
 export {photos};
+master
