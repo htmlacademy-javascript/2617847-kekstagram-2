@@ -1,5 +1,3 @@
-import { getRandomInteger, getUniqueId, getRandomArrayElement } from './utils.js';
-
 // Данные для генерации
 const MESSAGES = [
   'Всё отлично!',
@@ -56,8 +54,15 @@ const AVATAR_MAX_RANGE = 6;
 const MESSAGE_MIN_RANGE = 1;
 const MESSAGE_MAX_RANGE = 2;
 
-//Функция генерации комментария
+// Рандомайзеры
+const getRandomInteger = (a, b) => Math.floor(Math.random() * (b - a + 1)) + a;
+const getUniqueId = () => {
+  let lastId = 0;
+  return () => ++lastId;
+}
 
+const getRandomArrayElement = (elements) => elements[getRandomInteger(0, elements.length - 1)];
+//Функция генерации комментария
 const generateId = getUniqueId();
 
 function generateComment() {
@@ -83,12 +88,6 @@ function generatePhotoMessage() {
   };
 }
 // Создание массива фотографий
- module7-task1
-const mockedPhotos = Array.from({length: PHOTO_MAX_RANGE}, generatePhotoMessage);
-
-export {mockedPhotos};
-=======
 const photos = Array.from({length: PHOTO_MAX_RANGE}, generatePhotoMessage);
 
-export {photos};
-master
+console.log(photos)
